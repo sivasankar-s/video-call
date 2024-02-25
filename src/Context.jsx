@@ -5,7 +5,7 @@ import Peer from 'simple-peer';
 const SocketContext = createContext();
 
 // const socket = io('http://localhost:5000');
-const socket = io('hhttps://video-call-server-kcze.onrender.com');
+const socket = io('https://video-call-server-kcze.onrender.com');
 
 const ContextProvider = ({ children }) => {
   const [callAccepted, setCallAccepted] = useState(false);
