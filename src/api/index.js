@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const url = 'http://localhost:5000/auth'
+// const url = 'http://localhost:5000/auth'
+const url = 'https://video-call-server-kcze.onrender.com/auth'
 
 export const signUpAlum = (user) => axios.post(`${url}/registerAlumni`, user)
 
