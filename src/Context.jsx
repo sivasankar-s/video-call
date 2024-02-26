@@ -4,8 +4,8 @@ import Peer from 'simple-peer';
 
 const SocketContext = createContext();
 
-// const socket = io('http://localhost:5000');
-const socket = io('https://video-call-server-kcze.onrender.com');
+const socket = io('http://localhost:5000');
+// const socket = io('https://video-call-server-kcze.onrender.com');
 
 const ContextProvider = ({ children }) => {
   const [callAccepted, setCallAccepted] = useState(false);
@@ -37,7 +37,7 @@ const ContextProvider = ({ children }) => {
   const answerCall = () => {
     setCallAccepted(true);
 
-    const peer = new Peer({ initiator: false, trickle: false, stream, sdpSemantics: 'unified-plan', config: {
+    const peer = new Peer({ initiator: false, trickle: false, stream, config: {
       iceServers:[{urls:['stun:stun.l.google.com:19302']}],
 
     } });
@@ -57,7 +57,7 @@ const ContextProvider = ({ children }) => {
   };
 
   const callUser = (id) => {
-    const peer = new Peer({ initiator: true, trickle: false, stream, sdpSemantics: 'unified-plan', config: {
+    const peer = new Peer({ initiator: true, trickle: false, stream, config: {
       iceServers:[{urls:[ 'stun:stun.l.google.com:19302']}]
     } });
 

@@ -1,8 +1,4 @@
 import React, { useState, useContext } from 'react';
-// import { Button, TextField, Grid, Typography, Container, Paper } from '@material-ui/core';
-// import { CopyToClipboard } from 'react-copy-to-clipboard';
-// import { Assignment, Phone, PhoneDisabled } from '@material-ui/icons';
-// import { makeStyles } from '@material-ui/core/styles';
 
 import { SocketContext } from '../Context';
 
@@ -18,18 +14,15 @@ const Sidebar = ({ children }) => {
         <form  noValidate autoComplete="off">
           <div>
             <div>
-              <h6>Account Info</h6>
-              <input label="Name" value={name} onChange={(e) => setName(e.target.value)} fullWidth />
-              {/* <CopyToClipboard text={me} className={classes.margin}> */}
+              <input label="Name" className='border-black border-2 text-md mt-10' placeholder='Your username' value={name} onChange={(e) => setName(e.target.value)} fullWidth />
+              <div className='flex'>
+              <h6 className='mr-5'>Your ID:</h6>
               <input value={me}/>
-                <button type='button' fullWidth>
-                  Copy Your ID
-                </button>
-              {/* </CopyToClipboard> */}
+              </div>
+              
             </div>
             <div>
-              <h6>Make a call</h6>
-              <input label="ID to call" value={idToCall} onChange={(e) => setIdToCall(e.target.value)} fullWidth />
+              <input label="ID to call" className='border-2 border-black' placeholder='Enter ID to call' value={idToCall} onChange={(e) => setIdToCall(e.target.value)} fullWidth />
               {callAccepted && !callEnded ? (
                 <button type='button' fullWidth onClick={leaveCall} className='bg-red-600 p-3'>
                   Hang Up

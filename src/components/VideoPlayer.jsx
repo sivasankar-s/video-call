@@ -6,7 +6,7 @@ const VideoPlayer = () => {
     const { name, callAccepted, myVideo, userVideo, callEnded, stream, call } = useContext(SocketContext);
 
     return (
-        <div>
+        <div className='flex flex-wrap gap-10'>
             { stream && (
                 <video playsInline muted ref={myVideo} autoPlay />
             )}
