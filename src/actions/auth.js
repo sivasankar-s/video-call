@@ -78,3 +78,39 @@ export const signInStudent = async (user) => {
     }
 };
 
+export const getAlumni = async (user) => {
+    try{
+        console.log('in actions')
+        console.log(user)
+        const { data } = await api.getAlum(user);
+
+        console.log(data)
+
+        // localStorage.setItem('profile', JSON.stringify({data}))
+        // router.navigate('/studentHome')
+
+        // console.log(data[0])
+        return data;
+    } catch (error) {
+        console.log(error.message)
+    }
+};
+
+export const getStudent = async (user) => {
+    try{
+        console.log('in actions')
+        console.log(user)
+        const { data } = await api.getStud(user);
+
+        console.log(data)
+
+        // localStorage.setItem('profile', JSON.stringify({data}))
+        // router.navigate('/studentHome')
+
+        // console.log(data[0])
+        return data;
+    } catch (error) {
+        console.log(error.message)
+    }
+};
+
