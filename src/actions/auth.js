@@ -36,7 +36,7 @@ export const signInAlumni = async (user) => {
         // const {signin} = useAuthStore(data);
         // useAuthStore.getState().signin(data)
         localStorage.setItem('profile', JSON.stringify({data}))
-        router.navigate('/alumniHome')
+        router.navigate('/')
         // redirect('/')
         
         // navigate('/')
@@ -70,7 +70,7 @@ export const signInStudent = async (user) => {
         console.log(data)
 
         localStorage.setItem('profile', JSON.stringify({data}))
-        router.navigate('/studentHome')
+        router.navigate('/')
 
         // console.log(data[0])
     } catch (error) {
@@ -78,36 +78,28 @@ export const signInStudent = async (user) => {
     }
 };
 
-export const getAlumni = async (user) => {
+export const getAlumni = async () => {
     try{
         console.log('in actions')
-        console.log(user)
-        const { data } = await api.getAlum(user);
+        // console.log(user)
+        const { data } = await api.getAlum();
 
-        console.log(data)
+        // console.log(data)
 
-        // localStorage.setItem('profile', JSON.stringify({data}))
-        // router.navigate('/studentHome')
-
-        // console.log(data[0])
         return data;
     } catch (error) {
         console.log(error.message)
     }
 };
 
-export const getStudent = async (user) => {
+export const getStudent = async () => {
     try{
         console.log('in actions')
-        console.log(user)
-        const { data } = await api.getStud(user);
+        // console.log(user)
+        const { data } = await api.getStud();
 
-        console.log(data)
+        // console.log(data)
 
-        // localStorage.setItem('profile', JSON.stringify({data}))
-        // router.navigate('/studentHome')
-
-        // console.log(data[0])
         return data;
     } catch (error) {
         console.log(error.message)

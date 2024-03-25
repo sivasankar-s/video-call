@@ -11,9 +11,9 @@ export const signInAlum = (user) => axios.post(`${url}/loginAlumni`, user)
 
 export const signInStud = (user) => axios.post(`${url}/loginStudent`, user)
 
-export const getAlum = (user) => axios.post(`${url}/getAlumni`, user)
+export const getAlum = () => axios.get(`${url}/getAlumni`)
 
-export const getStud = (user) => axios.post(`${url}/getStudent`, user)
+export const getStud = () => axios.get(`${url}/getStudent`)
 
 // export const consumer = (payload) => axios.post('/consumer', payload)
 
