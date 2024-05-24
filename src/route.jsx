@@ -11,6 +11,7 @@ import RegisterStudent from './pages/RegisterStudent';
 import HomeAlumni from './pages/HomeAlumni';
 import HomeStudent from './pages/HomeStudent';
 import SearchPage from './pages/SearchPage';
+import ChatRoom from './pages/ChatRoom';
 // import VideoRoom from './pages/VideoRoom';
 // import GroupRoom from './pages/GroupRoom';
 
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
     {path: '/alumniHome', element: <HomeAlumni />},
     {path: '/studentHome', element: <HomeStudent />},
     {path: '/search', element: <SearchPage />},
+    {path: '/chatroom', element: <ChatRoom />},
     // {path: '/room/:roomID', element: <GroupRoom />},
 ])
 

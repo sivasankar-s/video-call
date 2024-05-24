@@ -116,7 +116,7 @@ const SearchPage = () => {
   ]
 
   return (
-    <div>SearchPage
+    <div>
 
 <div className="w-full mx-auto mt-10 mb-4 px-5">
       <SearchBox placeholder="Search..." onChange={handleSearchChange} />

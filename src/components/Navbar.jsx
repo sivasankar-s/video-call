@@ -36,7 +36,7 @@ const Navbar = () => {
   return (
     <>
     <div className='flex space-x-12 justify-end pr-5 py-4 bg-transparent absolute right-0 left-0 '>
-      <h1 className='text-xl'>{user?.data.result.name}</h1>
+      <h1 className='text-xl font-bold'>{user && "Welcome,"} {user?.data.result.name}</h1>
       { !user && (
         <>
         <Link to="/login" className=' rounded-md font-bold text-lg text-gray-900 hover:text-black transition-colors ease-in-out'>Login</Link>
@@ -44,10 +44,11 @@ const Navbar = () => {
         </>
       )}
 
-        {user && <button onClick={logOut} className='text-lg' >Logout</button>}
+        {user && <button onClick={logOut} className='text-lg font-bold' >Logout</button>}
     </div>
 
     </>
+
   )
 }
 
