@@ -45,11 +45,6 @@ export const signInAlumni = async (user) => {
         // signin();
 
         // localStorage.setItem('profile', JSON.stringify({data}))
-
-        
-
-
-
         // const resp = await api.signInAlum(user);
         console.log("after signin")
         console.log(data)
@@ -99,6 +94,63 @@ export const getStudent = async () => {
         const { data } = await api.getStud();
 
         // console.log(data)
+
+        return data;
+    } catch (error) {
+        console.log(error.message)
+    }
+};
+
+export const postMessage = async (message) => {
+    try{
+        console.log('in actions')
+        // console.log(user)
+        const { data } = await api.postMessage(message);
+
+        console.log(data)
+
+        
+
+        // console.log(data[0])
+    } catch (error) {
+        console.log(error.message)
+    }
+};
+
+export const getMessages = async () => {
+    try{
+        console.log('in actions')
+        // console.log(user)
+        const { data } = await api.getMessages();
+
+        console.log(data)
+
+        return data;
+    } catch (error) {
+        console.log(error.message)
+    }
+};
+
+export const createEve = async (event) => {
+    try{
+        console.log('in actions')
+        // console.log(user)
+        const { data } = await api.createEvent(event);
+
+        console.log(data)
+
+    } catch (error) {
+        console.log(error.message)
+    }
+};
+
+export const getEves = async () => {
+    try{
+        console.log('in actions')
+        // console.log(user)
+        const { data } = await api.getEvents();
+
+        console.log(data)
 
         return data;
     } catch (error) {

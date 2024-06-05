@@ -12,6 +12,7 @@ import HomeAlumni from './pages/HomeAlumni';
 import HomeStudent from './pages/HomeStudent';
 import SearchPage from './pages/SearchPage';
 import ChatRoom from './pages/ChatRoom';
+import CreateEvent from './pages/CreateEvent';
 // import VideoRoom from './pages/VideoRoom';
 // import GroupRoom from './pages/GroupRoom';
 
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
     {path: '/studentHome', element: <HomeStudent />},
     {path: '/search', element: <SearchPage />},
     {path: '/chatroom', element: <ChatRoom />},
+    {path: '/createEvent', element: <CreateEvent />},
     // {path: '/room/:roomID', element: <GroupRoom />},
 ])
 

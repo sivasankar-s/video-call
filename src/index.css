@@ -73,4 +73,70 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .chat-container {
+    padding: 20px;
+    background-color: #ece5dd;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chat-header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #075e54;
+  }
+
+  .chat-list {
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+
+  .chat-message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .message-content {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 70%;
+    position: relative;
+    margin-left: 10px;
+    word-wrap: break-word;
+  }
+
+  .message-header {
+    font-weight: bold;
+    color: #075e54;
+  }
+
+  .message-text {
+    margin-top: 5px;
+    white-space: pre-wrap;
+  }
+
+  .message-time {
+    display: block;
+    text-align: right;
+    color: #999;
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+
+  .chat-message .MuiAvatar-root {
+    margin-top: 5px;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
